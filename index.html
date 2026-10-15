@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Larpwitter</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="top-inner">
+      <a class="logo" href="./">larpw itter</a>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#profile">Profile</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page">
+    <aside class="left-column">
+      <section class="box profile-box">
+        <div class="profile-banner"></div>
+        <div class="profile-content">
+          <div class="avatar">L</div>
+          <strong id="profileName">Your profile</strong>
+          <p class="muted">@<span id="profileHandle">yourname</span></p>
+          <p class="muted">Welcome to Larpwitter!</p>
+        </div>
+      </section>
+
+      <section class="box side-links">
+        <a href="#home">⌂ &nbsp; Home</a>
+        <a href="#profile">♙ &nbsp; Profile</a>
+        <a href="#settings">⚙ &nbsp; Settings</a>
+      </section>
+
+      <section class="box about">
+        <strong>About Larpwitter</strong>
+        <p>A little piece of the old internet.</p>
+        <span>Green since day one.</span>
+      </section>
+    </aside>
+
+    <main id="home" class="timeline-column">
+      <section class="box composer">
+        <h2>What's happening?</h2>
+        <form id="postForm">
+          <textarea id="postText" maxlength="140"
+            placeholder="What's happening?" required></textarea>
+          <div class="composer-bottom">
+            <span id="charCount">140</span>
+            <button id="postButton" type="submit">Tweet</button>
+          </div>
+          <p id="postStatus" role="status"></p>
+        </form>
+      </section>
+
+      <section class="box timeline">
+        <div class="timeline-heading">
+          <strong>Timeline</strong>
+          <span id="connectionStatus">Connecting...</span>
+        </div>
+        <div id="posts">
+          <div class="empty">Loading tweets...</div>
+        </div>
+      </section>
+    </main>
+
+    <aside class="right-column">
+      <section class="box trends">
+        <h3>Trends</h3>
+        <div class="trend">
+          <strong>#Larpwitter</strong>
+          <span>It's the place to be.</span>
+        </div>
+        <div class="trend">
+          <strong>#OldInternet</strong>
+          <span>Bring back the classics.</span>
+        </div>
+        <div class="trend">
+          <strong>#HelloWorld</strong>
+          <span>Say hello!</span>
+        </div>
+      </section>
+
+      <section class="box follow-box">
+        <h3>Welcome aboard!</h3>
+        <p>Post something and it'll appear on everyone's timeline.</p>
+      </section>
+    </aside>
+  </div>
+
+  <footer>
+    Larpwitter · A little old-school social network
+  </footer>
+
+  <dialog id="settingsDialog">
+    <form id="settingsForm">
+      <h2>Your profile</h2>
+      <label for="usernameInput">Display name</label>
+      <input id="usernameInput" maxlength="20" required>
+      <div class="dialog-actions">
+        <button type="button" id="cancelSettings" class="secondary">
+          Cancel
+        </button>
+        <button type="submit">Save</button>
+      </div>
+    </form>
+  </dialog>
+</body>
+</html>
