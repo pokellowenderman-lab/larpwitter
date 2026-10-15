@@ -1,6 +1,6 @@
 
-const SUPABASE_URL = "PASTE_YOUR_PROJECT_URL";
-const SUPABASE_KEY = "PASTE_YOUR_PUBLISHABLE_KEY";
+const SUPABASE_URL = "https://zoqwrckvluqcxgacreij.supabase.co";
+const SUPABASE_KEY = "284723842376423872";
 
 const statusText = document.getElementById("connectionStatus");
 const postsContainer = document.getElementById("posts");
